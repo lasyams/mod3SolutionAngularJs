@@ -1,0 +1,10 @@
+  <h3>Found Items: </h3>
+  <div ng-if="list.isEmpty()">Nothing Found</div>
+  <ol>
+    <li ng-repeat="item in list.found">
+     <span>  "{{item.name}}" </span>
+      of category ({{item.short_name}}),
+        {{item.description}}.
+      <button ng-click="list.onRemove({index: $index});"> Don't want this one! </button>
+    </li>
+  </ol>
